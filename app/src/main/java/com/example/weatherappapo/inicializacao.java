@@ -3,6 +3,8 @@ package com.example.weatherappapo;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Looper;
+
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
@@ -21,14 +23,15 @@ public class inicializacao extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        new Handler().postDelayed(new Runnable() {
+        new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
             @Override
             public void run() {
-                // O que fazer após o atraso de 3 segundos: iniciar uma nova Activity
                 Intent intent = new Intent(inicializacao.this, MainActivity.class);
                 startActivity(intent);
-                finish(); // Finaliza a SplashScreen para que ela não volte ao pressionar o botão \"voltar\"
+                finish();
             }
         }, 3000);
+
+
         }
     }
