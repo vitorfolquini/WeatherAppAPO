@@ -22,9 +22,9 @@ public class SobreFragment extends Fragment {
         ImageView fotoImageView = rootView.findViewById(R.id.profile_image);
 
         // Defina os dados a serem exibidos no fragmento (dados fictícios como exemplo)
-        nomeTextView.setText("Seu Nome");
-        raTextView.setText("RA: 123456789");
-        cursoTextView.setText("Curso: Ciência da Computação");
+        nomeTextView.setText("Vitor Rohling Folquini");
+        raTextView.setText("RA: 09049985");
+        cursoTextView.setText("Curso: Analise e desenvolvimento de sistemas-Toledo-EAD");
         fotoImageView.setImageResource(R.drawable.eu); // Coloque a foto que você deseja exibir
 
         return rootView;
